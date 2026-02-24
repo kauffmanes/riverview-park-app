@@ -49,7 +49,7 @@ export function NavbarWithLogoActionsAndCenteredLinks({
         <div className="mx-auto flex h-(--scroll-padding-top) max-w-7xl items-center gap-4 px-6 lg:px-10">
           <div className="flex flex-1 items-center">{logo}</div>
           <div className="flex gap-8 max-lg:hidden">{links}</div>
-          <div className="flex flex-1 items-center justify-end gap-4">
+          {/* <div className="flex flex-1 items-center justify-end gap-4">
             <div className="flex shrink-0 items-center gap-5">{actions}</div>
 
             <button
@@ -66,7 +66,7 @@ export function NavbarWithLogoActionsAndCenteredLinks({
                 />
               </svg>
             </button>
-          </div>
+          </div> */}
         </div>
 
         <ElDialog className="lg:hidden">

@@ -18,8 +18,9 @@ import {
   NavbarLogo,
   NavbarWithLogoActionsAndCenteredLinks,
 } from "./components/sections/navbar-with-logo-actions-and-centered-links";
-
+import { NavbarLink } from "./components/sections/navbar-with-links-actions-and-centered-logo";
 import "./app.css";
+import { ButtonLink, PlainButtonLink } from "./components/elements/button";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -50,23 +51,16 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <body>
         <NavbarWithLogoActionsAndCenteredLinks
           id="navbar"
-          links={<></>}
+          links={
+            <>
+              {/* <NavbarLink href="/nature">Nature</NavbarLink>
+              <NavbarLink href="/arts">Arts</NavbarLink>
+              <NavbarLink href="/facilities">Facilities</NavbarLink> */}
+            </>
+          }
           logo={
             <NavbarLogo href="/">
-              <img
-                src="/img/logos/oatmeal-instrument-color-olive-950.svg"
-                alt="Oatmeal"
-                className="dark:hidden"
-                width={85}
-                height={28}
-              />
-              <img
-                src="/img/logos/oatmeal-instrument-color-white.svg"
-                alt="Oatmeal"
-                className="not-dark:hidden"
-                width={85}
-                height={28}
-              />
+              <strong>Riverview Park</strong>
             </NavbarLogo>
           }
           actions={<></>}
@@ -76,37 +70,37 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
         <FooterWithLinkCategories
           id="footer"
-          links={
-            <>
-              <FooterCategory title="Product">
-                <FooterLink href="#">Features</FooterLink>
-                <FooterLink href="#">Integrations</FooterLink>
-              </FooterCategory>
-              <FooterCategory title="Company">
-                <FooterLink href="/about">About</FooterLink>
-                <FooterLink href="#">Careers</FooterLink>
-                <FooterLink href="#">Blog</FooterLink>
-                <FooterLink href="#">Press Kit</FooterLink>
-              </FooterCategory>
-              <FooterCategory title="Resources">
-                <FooterLink href="#">Help Center</FooterLink>
-                <FooterLink href="#">API Docs</FooterLink>
-                <FooterLink href="#">Status</FooterLink>
-                <FooterLink href="#">Contact</FooterLink>
-              </FooterCategory>
-              <FooterCategory title="Legal">
-                <FooterLink href="/privacy-policy">Privacy Policy</FooterLink>
-                <FooterLink href="#">Terms of Service</FooterLink>
-                <FooterLink href="#">Security</FooterLink>
-              </FooterCategory>
-              <FooterCategory title="Connect">
-                <FooterLink href="https://x.com">X</FooterLink>
-                <FooterLink href="https://github.com">GitHub</FooterLink>
-                <FooterLink href="https://www.youtube.com">YouTube</FooterLink>
-              </FooterCategory>
-            </>
+          links={<></>
+            //   <>
+            //     <FooterCategory title="Product">
+            //       <FooterLink href="#">Features</FooterLink>
+            //       <FooterLink href="#">Integrations</FooterLink>
+            //     </FooterCategory>
+            //     <FooterCategory title="Company">
+            //       <FooterLink href="/about">About</FooterLink>
+            //       <FooterLink href="#">Careers</FooterLink>
+            //       <FooterLink href="#">Blog</FooterLink>
+            //       <FooterLink href="#">Press Kit</FooterLink>
+            //     </FooterCategory>
+            //     <FooterCategory title="Resources">
+            //       <FooterLink href="#">Help Center</FooterLink>
+            //       <FooterLink href="#">API Docs</FooterLink>
+            //       <FooterLink href="#">Status</FooterLink>
+            //       <FooterLink href="#">Contact</FooterLink>
+            //     </FooterCategory>
+            //     <FooterCategory title="Legal">
+            //       <FooterLink href="/privacy-policy">Privacy Policy</FooterLink>
+            //       <FooterLink href="#">Terms of Service</FooterLink>
+            //       <FooterLink href="#">Security</FooterLink>
+            //     </FooterCategory>
+            //     <FooterCategory title="Connect">
+            //       <FooterLink href="https://x.com">X</FooterLink>
+            //       <FooterLink href="https://github.com">GitHub</FooterLink>
+            //       <FooterLink href="https://www.youtube.com">YouTube</FooterLink>
+            //     </FooterCategory>
+            //   </>
           }
-          fineprint="© 2025 Oatmeal, Inc."
+          fineprint={`© ${new Date().getFullYear()} Emily Kauffman`}
         />
 
         <ScrollRestoration />

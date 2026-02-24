@@ -11,7 +11,7 @@ import { HeroWithDemoOnBackground } from "../components/sections/hero-with-demo-
 import { Plan, PricingMultiTier } from "../components/sections/pricing-multi-tier";
 import { TestimonialLargeQuote } from "../components/sections/testimonial-with-large-quote";
 
-export function meta({}: Route.MetaArgs) {
+export function meta({ }: Route.MetaArgs) {
   return [
     { title: "Riverview Park App" },
     { name: "description", content: "Customer support that feels like a conversation." },
@@ -31,341 +31,97 @@ export default function Home() {
           </p>
         }
         demo={
-          <>
-            <img
-              className="bg-white/75 md:hidden dark:hidden"
-              src="https://assets.tailwindplus.com/screenshots/1.webp?top=900"
-              alt=""
-              width="3440"
-              height="1500"
-            />
-            <img
-              className="bg-black/75 not-dark:hidden md:hidden"
-              src="https://assets.tailwindplus.com/screenshots/1.webp?top=900&color=olive"
-              alt=""
-              width="3440"
-              height="1500"
-            />
-            <img
-              className="bg-white/75 max-md:hidden lg:hidden dark:hidden"
-              src="https://assets.tailwindplus.com/screenshots/1.webp?top=1200"
-              alt=""
-              width="3440"
-              height="1500"
-            />
-            <img
-              className="bg-black/75 not-dark:hidden max-md:hidden lg:hidden"
-              src="https://assets.tailwindplus.com/screenshots/1.webp?top=1200&color=olive"
-              alt=""
-              width="3440"
-              height="1500"
-            />
-            <img
-              className="bg-white/75 max-lg:hidden dark:hidden"
-              src="https://assets.tailwindplus.com/screenshots/1.webp?top=1500"
-              alt=""
-              width="3440"
-              height="1500"
-            />
-            <img
-              className="bg-black/75 not-dark:hidden max-lg:hidden"
-              src="https://assets.tailwindplus.com/screenshots/1.webp?top=1500&color=olive"
-              alt=""
-              width="3440"
-              height="1500"
-            />
-          </>
+          <img
+            src="https://images.squarespace-cdn.com/content/v1/64d182ccdbe1c3217d5eaa4d/5355838a-51d0-4b19-b8d7-41c802d99912/Facebook+observatory.jpg"
+            alt="Allegheny Observatory at Riverview Park"
+            className="size-full object-cover"
+            width={1920}
+            height={1080}
+          />
         }
       />
 
       {/* Features */}
       <Features
         id="features"
-        headline="Everything you need to deliver personal, organized, and delightful support."
+        headline="Come experience the natural beauty of southwestern Pennsylvania."
         subheadline={
           <p>
-            Work smarter, reply faster, and keep every customer conversation right where it belongs — in one simple
-            inbox, where you can ignore it.
+            Riverview Park consists of 259 acres of sprawling forested hills, hiking trails, interesting geology, and community spaces. Whether it be catching a public lecture at the Allegheny Observatory, spreading out a blanket to watch a movie during Movie in the Park, or tackling the grueling park loop run, there’s a little something for everyone.
           </p>
         }
-        cta={
-          <Link href="#">
-            See how it works <ArrowNarrowRightIcon />
-          </Link>
-        }
+        // cta={
+        //   <Link href="#">
+        //     See how it works <ArrowNarrowRightIcon />
+        //   </Link>
+        // }
         features={
           <>
             <FeatureThreeColumnWithDemos
+              href="/nature"
               demo={
-                <Screenshot wallpaper="blue" placement="bottom-right">
+                <Screenshot wallpaper="green" placement="bottom-right">
                   <img
-                    src="https://assets.tailwindplus.com/screenshots/1.webp?left=1200&top=736"
-                    alt=""
-                    className="bg-white/75 sm:hidden dark:hidden"
-                    width={1200}
-                    height={736}
-                  />
-                  <img
-                    src="https://assets.tailwindplus.com/screenshots/1.webp?left=1200&top=736&color=olive"
-                    alt=""
-                    width={1200}
-                    height={736}
-                    className="bg-black/75 not-dark:hidden sm:hidden"
-                  />
-                  <img
-                    src="https://assets.tailwindplus.com/screenshots/1.webp?left=1800&top=736"
-                    alt=""
-                    className="bg-white/75 max-sm:hidden lg:hidden dark:hidden"
-                    width={1800}
-                    height={736}
-                  />
-                  <img
-                    src="https://assets.tailwindplus.com/screenshots/1.webp?left=1800&top=736&color=olive"
-                    alt=""
-                    width={1800}
-                    height={736}
-                    className="bg-black/75 not-dark:hidden max-sm:hidden lg:hidden"
-                  />
-                  <img
-                    src="https://assets.tailwindplus.com/screenshots/1.webp?left=1200&top=736"
-                    alt=""
-                    className="bg-white/75 max-lg:hidden dark:hidden"
-                    width={1200}
-                    height={736}
-                  />
-                  <img
-                    src="https://assets.tailwindplus.com/screenshots/1.webp?left=1200&top=736&color=olive"
-                    alt=""
-                    width={1200}
-                    height={736}
-                    className="bg-black/75 not-dark:hidden max-lg:hidden"
+                    src="https://images.unsplash.com/photo-1542202229-7d93c33f5d07?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="Nature at Riverview Park"
+                    className="size-full object-cover"
+                    width={1740}
+                    height={1160}
                   />
                 </Screenshot>
               }
-              headline="Shared Inbox"
-              subheadline={<p>Manage support emails together in real time — no more support email hot potato.</p>}
+              headline="Immerse in nature"
+              subheadline={<p>Riverview Park is home to a variety of wildlife, including deer, squirrels, and birds.</p>}
             />
             <FeatureThreeColumnWithDemos
+              href="/events"
               demo={
                 <Screenshot wallpaper="purple" placement="top-left">
                   <img
-                    src="https://assets.tailwindplus.com/screenshots/1.webp?right=1200&bottom=736"
-                    alt=""
-                    className="bg-white/75 sm:hidden dark:hidden"
-                    width={1200}
-                    height={736}
-                  />
-                  <img
-                    src="https://assets.tailwindplus.com/screenshots/1.webp?right=1200&bottom=736&color=olive"
-                    alt=""
-                    width={1200}
-                    height={736}
-                    className="bg-black/75 not-dark:hidden sm:hidden"
-                  />
-                  <img
-                    src="https://assets.tailwindplus.com/screenshots/1.webp?right=1800&bottom=736"
-                    alt=""
-                    className="bg-white/75 max-sm:hidden lg:hidden dark:hidden"
-                    width={1800}
-                    height={736}
-                  />
-                  <img
-                    src="https://assets.tailwindplus.com/screenshots/1.webp?right=1800&bottom=736&color=olive"
-                    alt=""
-                    width={1800}
-                    height={736}
-                    className="bg-black/75 not-dark:hidden max-sm:hidden lg:hidden"
-                  />
-                  <img
-                    src="https://assets.tailwindplus.com/screenshots/1.webp?right=1200&bottom=736"
-                    alt=""
-                    className="bg-white/75 max-lg:hidden dark:hidden"
-                    width={1200}
-                    height={736}
-                  />
-                  <img
-                    src="https://assets.tailwindplus.com/screenshots/1.webp?right=1200&bottom=736&color=olive"
-                    alt=""
-                    width={1200}
-                    height={736}
-                    className="bg-black/75 not-dark:hidden max-lg:hidden"
+                    src="https://plus.unsplash.com/premium_photo-1681885032909-8d645ac23be4?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="Arts and community at Riverview Park"
+                    className="size-full object-cover"
+                    width={1740}
+                    height={1160}
                   />
                 </Screenshot>
               }
-              headline="Collision Detection"
+              headline="Arts, Community, and Events"
               subheadline={<p>See when a teammate is replying before you hit send. Goodbye duplicate replies.</p>}
             />
             <FeatureThreeColumnWithDemos
+              href="/facilities"
               demo={
                 <Screenshot wallpaper="brown" placement="bottom-left">
                   <img
-                    src="https://assets.tailwindplus.com/screenshots/1.webp?right=1200&top=736"
-                    alt=""
-                    className="bg-white/75 sm:hidden dark:hidden"
-                    width={1200}
-                    height={736}
-                  />
-                  <img
-                    src="https://assets.tailwindplus.com/screenshots/1.webp?right=1200&top=736&color=olive"
-                    alt=""
-                    width={1200}
-                    height={736}
-                    className="bg-black/75 not-dark:hidden sm:hidden"
-                  />
-                  <img
-                    src="https://assets.tailwindplus.com/screenshots/1.webp?right=1800&top=736"
-                    alt=""
-                    className="bg-white/75 max-sm:hidden lg:hidden dark:hidden"
-                    width={1800}
-                    height={736}
-                  />
-                  <img
-                    src="https://assets.tailwindplus.com/screenshots/1.webp?right=1800&top=736&color=olive"
-                    alt=""
-                    className="bg-black/75 not-dark:hidden max-sm:hidden lg:hidden"
-                    width={1800}
-                    height={736}
-                  />
-                  <img
-                    src="https://assets.tailwindplus.com/screenshots/1.webp?right=1200&top=736"
-                    alt=""
-                    className="bg-white/75 max-lg:hidden dark:hidden"
-                    width={1200}
-                    height={736}
-                  />
-                  <img
-                    src="https://assets.tailwindplus.com/screenshots/1.webp?right=1200&top=736&color=olive"
-                    alt=""
-                    className="bg-black/75 not-dark:hidden max-lg:hidden"
-                    width={1200}
-                    height={736}
+                    src="https://images.unsplash.com/photo-1701457916764-7cc7c990b37a?q=80&w=1750&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="Facilities at Riverview Park"
+                    className="size-full object-cover"
+                    width={1750}
+                    height={1167}
                   />
                 </Screenshot>
               }
-              headline="Inbox Agent"
-              subheadline={<p>Get valuable context without having to read through your customer's angry emails.</p>}
+              headline="Facilities"
+              subheadline={<p>The park has a variety of facilities, including a playground, a picnic area, and a dog park.</p>}
             />
           </>
         }
       />
 
-      {/* Testimonial */}
-      <TestimonialLargeQuote
-        id="testimonial"
-        quote={
-          <p>
-            Oatmeal has completely transformed our customer support operations. The blend of AI efficiency and human
-            empathy has allowed us to provide exceptional service while significantly reducing costs.
-          </p>
-        }
-        img={
-          <img
-            src="https://assets.tailwindplus.com/avatars/10.webp?size=160"
-            alt=""
-            className="not-dark:bg-white/75 dark:bg-black/75"
-            width={160}
-            height={160}
-          />
-        }
-        name="Jordan Rogers"
-        byline="Founder at Anomaly"
-      />
 
       {/* FAQs */}
       <FAQsTwoColumnAccordion id="faqs" headline="Questions & Answers">
         <Faq
           id="faq-1"
-          question="Do I need a credit card to start the free trial?"
-          answer="Yes, but don't worry, you won't be charged until the trial period is over. We won't send you an email reminding you when this happens because we are really hoping you'll forget and we can keep charging you until your cards expires"
-        />
-        <Faq
-          id="faq-2"
-          question="Can my whole team use the same inbox?"
-          answer="Yes, the more the merrier! Oatmeal works best when your entire company has access. We will charge you per additional seat, but we won't tell you about this until you get your invoice."
-        />
-        <Faq
-          id="faq-3"
-          question="Is the AI agent actually a bunch of people in India?"
-          answer="Not just India! We have people in lots of countries around the world pretending to be an AI, including some that are currently under sanctions, so we can't legally mention them here."
-        />
-        <Faq
-          id="faq-4"
-          question="Does Oatmeal replace my email client?"
-          answer="Absolutely. The idea is that we transition you away from email entirely, so you become completely dependent on our service. Like a parasite living off a host."
+          question="Can I bring my dog?"
+          answer="Yes, but they must be on a leash. There are two dog parks behind the Observatory, one for large dogs and one for small dogs."
         />
       </FAQsTwoColumnAccordion>
 
-      {/* Pricing */}
-      <PricingMultiTier
-        id="pricing"
-        headline="Pricing to fit your business needs."
-        plans={
-          <>
-            <Plan
-              name="Starter"
-              price="$12"
-              period="/mo"
-              subheadline={<p>Small teams getting started with shared inboxes</p>}
-              features={[
-                "Shared inbox for up to 2 mailboxes",
-                "Tagging & assignment",
-                "Private notes",
-                "Automatic replies",
-                "Email support",
-              ]}
-              cta={
-                <SoftButtonLink href="#" size="lg">
-                  Start free trial
-                </SoftButtonLink>
-              }
-            />
-            <Plan
-              name="Growth"
-              price="$49"
-              period="/mo"
-              subheadline={<p>Growing teams needing collaboration and insights</p>}
-              badge="Most popular"
-              features={[
-                "Everything in Starter",
-                "Inbox Agent",
-                "Unlimited mailboxes",
-                "Collision detection",
-                "Snippets and templates",
-                "Reporting dashboard",
-                "Slack integration",
-              ]}
-              cta={
-                <ButtonLink href="#" size="lg">
-                  Start free trial
-                </ButtonLink>
-              }
-            />
-            <Plan
-              name="Pro"
-              price="$299"
-              period="/mo"
-              subheadline={<p>Support-focused organizations and larger teams</p>}
-              features={[
-                "Everything in Growth",
-                "Custom roles & permissions",
-                "Automation engine",
-                "API access",
-                "SLA tracking",
-                "SSO support",
-                "SOC 2 compliance",
-              ]}
-              cta={
-                <SoftButtonLink href="#" size="lg">
-                  Start free trial
-                </SoftButtonLink>
-              }
-            />
-          </>
-        }
-      />
 
       {/* Call To Action */}
-      <CallToActionSimple
+      {/* <CallToActionSimple
         id="call-to-action"
         headline="Ready to make customer support feel simple again?"
         subheadline={
@@ -385,7 +141,7 @@ export default function Home() {
             </PlainButtonLink>
           </div>
         }
-      />
+      /> */}
     </>
   );
 }
