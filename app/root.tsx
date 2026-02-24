@@ -8,6 +8,17 @@ import {
 } from "react-router";
 
 import type { Route } from "./+types/root";
+import { Main } from "./components/elements/main";
+import {
+  FooterCategory,
+  FooterLink,
+  FooterWithLinkCategories,
+} from "./components/sections/footer-with-link-categories";
+import {
+  NavbarLogo,
+  NavbarWithLogoActionsAndCenteredLinks,
+} from "./components/sections/navbar-with-logo-actions-and-centered-links";
+
 import "./app.css";
 
 export const links: Route.LinksFunction = () => [
@@ -16,6 +27,10 @@ export const links: Route.LinksFunction = () => [
     rel: "preconnect",
     href: "https://fonts.gstatic.com",
     crossOrigin: "anonymous",
+  },
+  {
+    rel: "stylesheet",
+    href: "https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap",
   },
   {
     rel: "stylesheet",
@@ -33,7 +48,67 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        {children}
+        <NavbarWithLogoActionsAndCenteredLinks
+          id="navbar"
+          links={<></>}
+          logo={
+            <NavbarLogo href="/">
+              <img
+                src="/img/logos/oatmeal-instrument-color-olive-950.svg"
+                alt="Oatmeal"
+                className="dark:hidden"
+                width={85}
+                height={28}
+              />
+              <img
+                src="/img/logos/oatmeal-instrument-color-white.svg"
+                alt="Oatmeal"
+                className="not-dark:hidden"
+                width={85}
+                height={28}
+              />
+            </NavbarLogo>
+          }
+          actions={<></>}
+        />
+
+        <Main>{children}</Main>
+
+        <FooterWithLinkCategories
+          id="footer"
+          links={
+            <>
+              <FooterCategory title="Product">
+                <FooterLink href="#">Features</FooterLink>
+                <FooterLink href="#">Integrations</FooterLink>
+              </FooterCategory>
+              <FooterCategory title="Company">
+                <FooterLink href="/about">About</FooterLink>
+                <FooterLink href="#">Careers</FooterLink>
+                <FooterLink href="#">Blog</FooterLink>
+                <FooterLink href="#">Press Kit</FooterLink>
+              </FooterCategory>
+              <FooterCategory title="Resources">
+                <FooterLink href="#">Help Center</FooterLink>
+                <FooterLink href="#">API Docs</FooterLink>
+                <FooterLink href="#">Status</FooterLink>
+                <FooterLink href="#">Contact</FooterLink>
+              </FooterCategory>
+              <FooterCategory title="Legal">
+                <FooterLink href="/privacy-policy">Privacy Policy</FooterLink>
+                <FooterLink href="#">Terms of Service</FooterLink>
+                <FooterLink href="#">Security</FooterLink>
+              </FooterCategory>
+              <FooterCategory title="Connect">
+                <FooterLink href="https://x.com">X</FooterLink>
+                <FooterLink href="https://github.com">GitHub</FooterLink>
+                <FooterLink href="https://www.youtube.com">YouTube</FooterLink>
+              </FooterCategory>
+            </>
+          }
+          fineprint="© 2025 Oatmeal, Inc."
+        />
+
         <ScrollRestoration />
         <Scripts />
       </body>
