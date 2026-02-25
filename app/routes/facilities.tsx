@@ -1,17 +1,15 @@
 import type { Route } from "./+types/facilities";
-import { Section } from "../components/elements/section";
+import { StoryMapEmbed } from "../components/elements/storymap-embed";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "Facilities — Riverview Park App" },
+    { title: "Facilities — Riverview Park" },
     { name: "description", content: "Park facilities, playground, picnic areas, and dog park." },
   ];
 }
 
 export default function Facilities() {
   return (
-    <Section id="facilities" headline="Facilities">
-      <p className="text-olive-700 dark:text-olive-400">Content coming soon.</p>
-    </Section>
+    <StoryMapEmbed storyId="PLACEHOLDER_FACILITIES_STORY_ID" />
   );
 }

@@ -1,17 +1,17 @@
 import type { Route } from "./+types/nature";
-import { Section } from "../components/elements/section";
+import { StoryMapEmbed } from "../components/elements/storymap-embed";
 
-export function meta({}: Route.MetaArgs) {
+export function meta({ }: Route.MetaArgs) {
   return [
-    { title: "Immerse in nature — Riverview Park App" },
+    { title: "Immerse in Nature — Riverview Park" },
     { name: "description", content: "Riverview Park wildlife, trails, and natural beauty." },
   ];
 }
 
 export default function Nature() {
   return (
-    <Section id="nature" headline="Immerse in nature">
-      <p className="text-olive-700 dark:text-olive-400">Content coming soon.</p>
-    </Section>
+    <section className="flex flex-col gap-16 px-2 pb-16">
+      <StoryMapEmbed storyId="4daee479ad1b44c682ec6a36b71a7718" />
+    </section>
   );
 }

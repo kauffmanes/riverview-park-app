@@ -1,17 +1,15 @@
 import type { Route } from "./+types/events";
-import { Section } from "../components/elements/section";
+import { StoryMapEmbed } from "../components/elements/storymap-embed";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "Arts, Community & Events — Riverview Park App" },
+    { title: "Arts, Community & Events — Riverview Park" },
     { name: "description", content: "Events and community at Riverview Park." },
   ];
 }
 
 export default function Events() {
   return (
-    <Section id="events" headline="Arts, Community, and Events">
-      <p className="text-olive-700 dark:text-olive-400">Content coming soon.</p>
-    </Section>
+    <StoryMapEmbed storyId="PLACEHOLDER_EVENTS_STORY_ID" />
   );
 }
