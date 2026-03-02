@@ -54,7 +54,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
           links={
             <>
               <NavbarLink href="/nature">Nature</NavbarLink>
-              <NavbarLink href="/arts">Arts</NavbarLink>
+              <NavbarLink href="/community">Community</NavbarLink>
               <NavbarLink href="/facilities">Facilities</NavbarLink>
             </>
           }
@@ -70,7 +70,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
         <FooterWithLinkCategories
           id="footer"
-          links={<></>
+          links={
+            <></>
             //   <>
             //     <FooterCategory title="Product">
             //       <FooterLink href="#">Features</FooterLink>

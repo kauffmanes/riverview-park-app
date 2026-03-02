@@ -4,7 +4,7 @@ export default [
   index("routes/home.tsx"),
   route("about", "routes/about.tsx"),
   route("nature", "routes/nature.tsx"),
-  route("events", "routes/events.tsx"),
+  route("community", "routes/community.tsx"),
   route("facilities", "routes/facilities.tsx"),
   route("privacy-policy", "routes/privacy-policy.tsx"),
   route("*", "routes/404.tsx"),

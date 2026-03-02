@@ -1,20 +1,36 @@
 import type { Route } from "./+types/home";
-import { ButtonLink, PlainButtonLink, SoftButtonLink } from "../components/elements/button";
+import {
+  ButtonLink,
+  PlainButtonLink,
+  SoftButtonLink,
+} from "../components/elements/button";
 import { Link } from "../components/elements/link";
 import { Screenshot } from "../components/elements/screenshot";
 import { ArrowNarrowRightIcon } from "../components/icons/arrow-narrow-right-icon";
 import { ChevronIcon } from "../components/icons/chevron-icon";
 import { CallToActionSimple } from "../components/sections/call-to-action-simple";
-import { FAQsTwoColumnAccordion, Faq } from "../components/sections/faqs-two-column-accordion";
-import { FeatureThreeColumnWithDemos, Features } from "../components/sections/features-three-column-with-demos";
+import {
+  FAQsTwoColumnAccordion,
+  Faq,
+} from "../components/sections/faqs-two-column-accordion";
+import {
+  FeatureThreeColumnWithDemos,
+  Features,
+} from "../components/sections/features-three-column-with-demos";
 import { HeroWithDemoOnBackground } from "../components/sections/hero-with-demo-on-background";
-import { Plan, PricingMultiTier } from "../components/sections/pricing-multi-tier";
+import {
+  Plan,
+  PricingMultiTier,
+} from "../components/sections/pricing-multi-tier";
 import { TestimonialLargeQuote } from "../components/sections/testimonial-with-large-quote";
 
-export function meta({ }: Route.MetaArgs) {
+export function meta({}: Route.MetaArgs) {
   return [
     { title: "Riverview Park App" },
-    { name: "description", content: "Customer support that feels like a conversation." },
+    {
+      name: "description",
+      content: "Customer support that feels like a conversation.",
+    },
   ];
 }
 
@@ -26,9 +42,7 @@ export default function Home() {
         id="hero"
         headline="Riverview Park"
         subheadline={
-          <p>
-            A local's guide to Pittsburgh's most overlooked park.
-          </p>
+          <p>A local's guide to Pittsburgh's most overlooked park.</p>
         }
         demo={
           <img
@@ -47,7 +61,11 @@ export default function Home() {
         headline="Come experience the natural beauty of southwestern Pennsylvania."
         subheadline={
           <p>
-            Riverview Park consists of 259 acres of sprawling forested hills, hiking trails, interesting geology, and community spaces. Whether it be catching a public lecture at the Allegheny Observatory, spreading out a blanket to watch a movie during Movie in the Park, or tackling the grueling park loop run, there’s a little something for everyone.
+            Riverview Park consists of 259 acres of sprawling forested hills,
+            hiking trails, interesting geology, and community spaces. Whether it
+            be catching a public lecture at the Allegheny Observatory, spreading
+            out a blanket to watch a movie during Movie in the Park, or tackling
+            the grueling park loop run, there’s a little something for everyone.
           </p>
         }
         // cta={
@@ -71,10 +89,15 @@ export default function Home() {
                 </Screenshot>
               }
               headline="Immerse in nature"
-              subheadline={<p>Riverview Park is home to a variety of wildlife, including deer, squirrels, and birds.</p>}
+              subheadline={
+                <p>
+                  Riverview Park is home to a variety of wildlife, including
+                  deer, squirrels, and birds.
+                </p>
+              }
             />
             <FeatureThreeColumnWithDemos
-              href="/events"
+              href="/community"
               demo={
                 <Screenshot wallpaper="purple" placement="top-left">
                   <img
@@ -87,7 +110,13 @@ export default function Home() {
                 </Screenshot>
               }
               headline="Arts, Community, and Events"
-              subheadline={<p>See when a teammate is replying before you hit send. Goodbye duplicate replies.</p>}
+              subheadline={
+                <p>
+                  The park hosts a variety of events, including public lectures
+                  at the Allegheny Observatory, Movie in the Park, and the
+                  annual Riverview Park Run.
+                </p>
+              }
             />
             <FeatureThreeColumnWithDemos
               href="/facilities"
@@ -103,12 +132,16 @@ export default function Home() {
                 </Screenshot>
               }
               headline="Facilities"
-              subheadline={<p>The park has a variety of facilities, including a playground, a picnic area, and a dog park.</p>}
+              subheadline={
+                <p>
+                  The park has a variety of facilities, including a playground,
+                  a picnic area, and a dog park.
+                </p>
+              }
             />
           </>
         }
       />
-
 
       {/* FAQs */}
       <FAQsTwoColumnAccordion id="faqs" headline="Questions & Answers">
@@ -118,7 +151,6 @@ export default function Home() {
           answer="Yes, but they must be on a leash. There are two dog parks behind the Observatory, one for large dogs and one for small dogs."
         />
       </FAQsTwoColumnAccordion>
-
 
       {/* Call To Action */}
       {/* <CallToActionSimple
