@@ -76,6 +76,27 @@ export default function Home() {
         features={
           <>
             <FeatureThreeColumnWithDemos
+              href="/plan-your-visit"
+              demo={
+                <Screenshot wallpaper="brown" placement="bottom-left">
+                  <img
+                    src="https://images.unsplash.com/photo-1701457916764-7cc7c990b37a?q=80&w=1750&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="Plan Your Visit at Riverview Park"
+                    className="size-full object-cover"
+                    width={1750}
+                    height={1167}
+                  />
+                </Screenshot>
+              }
+              headline="Plan Your Visit"
+              subheadline={
+                <p>
+                  The park has a variety of facilities, including a playground,
+                  a picnic area, and a dog park.
+                </p>
+              }
+            />
+            <FeatureThreeColumnWithDemos
               href="/nature"
               demo={
                 <Screenshot wallpaper="green" placement="bottom-right">
@@ -115,27 +136,6 @@ export default function Home() {
                   The park hosts a variety of events, including public lectures
                   at the Allegheny Observatory, Movie in the Park, and the
                   annual Riverview Park Run.
-                </p>
-              }
-            />
-            <FeatureThreeColumnWithDemos
-              href="/facilities"
-              demo={
-                <Screenshot wallpaper="brown" placement="bottom-left">
-                  <img
-                    src="https://images.unsplash.com/photo-1701457916764-7cc7c990b37a?q=80&w=1750&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt="Facilities at Riverview Park"
-                    className="size-full object-cover"
-                    width={1750}
-                    height={1167}
-                  />
-                </Screenshot>
-              }
-              headline="Facilities"
-              subheadline={
-                <p>
-                  The park has a variety of facilities, including a playground,
-                  a picnic area, and a dog park.
                 </p>
               }
             />

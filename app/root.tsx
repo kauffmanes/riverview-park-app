@@ -53,9 +53,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
           id="navbar"
           links={
             <>
+              <NavbarLink href="/plan-your-visit">Plan Your Visit</NavbarLink>
               <NavbarLink href="/nature">Nature</NavbarLink>
               <NavbarLink href="/community">Community</NavbarLink>
-              <NavbarLink href="/facilities">Facilities</NavbarLink>
             </>
           }
           logo={
