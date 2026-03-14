@@ -9,6 +9,7 @@ import {
 
 import type { Route } from "./+types/root";
 import { Main } from "./components/elements/main";
+import { ContactForm } from "./components/sections/contact-form";
 import {
   FooterCategory,
   FooterLink,
@@ -20,7 +21,6 @@ import {
 } from "./components/sections/navbar-with-logo-actions-and-centered-links";
 import { NavbarLink } from "./components/sections/navbar-with-links-actions-and-centered-logo";
 import "./app.css";
-import { ButtonLink, PlainButtonLink } from "./components/elements/button";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -71,36 +71,15 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <FooterWithLinkCategories
           id="footer"
           links={
-            <></>
-            //   <>
-            //     <FooterCategory title="Product">
-            //       <FooterLink href="#">Features</FooterLink>
-            //       <FooterLink href="#">Integrations</FooterLink>
-            //     </FooterCategory>
-            //     <FooterCategory title="Company">
-            //       <FooterLink href="/about">About</FooterLink>
-            //       <FooterLink href="#">Careers</FooterLink>
-            //       <FooterLink href="#">Blog</FooterLink>
-            //       <FooterLink href="#">Press Kit</FooterLink>
-            //     </FooterCategory>
-            //     <FooterCategory title="Resources">
-            //       <FooterLink href="#">Help Center</FooterLink>
-            //       <FooterLink href="#">API Docs</FooterLink>
-            //       <FooterLink href="#">Status</FooterLink>
-            //       <FooterLink href="#">Contact</FooterLink>
-            //     </FooterCategory>
-            //     <FooterCategory title="Legal">
-            //       <FooterLink href="/privacy-policy">Privacy Policy</FooterLink>
-            //       <FooterLink href="#">Terms of Service</FooterLink>
-            //       <FooterLink href="#">Security</FooterLink>
-            //     </FooterCategory>
-            //     <FooterCategory title="Connect">
-            //       <FooterLink href="https://x.com">X</FooterLink>
-            //       <FooterLink href="https://github.com">GitHub</FooterLink>
-            //       <FooterLink href="https://www.youtube.com">YouTube</FooterLink>
-            //     </FooterCategory>
-            //   </>
+            <>
+              <FooterCategory title="Explore">
+                <FooterLink href="/plan-your-visit">Plan Your Visit</FooterLink>
+                <FooterLink href="/nature">Nature</FooterLink>
+                <FooterLink href="/community">Community</FooterLink>
+              </FooterCategory>
+            </>
           }
+          aside={<ContactForm />}
           fineprint={`© ${new Date().getFullYear()} Emily Kauffman`}
         />
 

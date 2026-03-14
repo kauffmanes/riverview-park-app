@@ -32,20 +32,31 @@ export function FooterLink({
 
 export function FooterWithLinkCategories({
   links,
+  aside,
   fineprint,
   className,
   ...props
 }: {
   links: ReactNode;
+  aside?: ReactNode;
   fineprint: ReactNode;
 } & ComponentProps<"footer">) {
   return (
     <footer className={clsx("pt-16", className)} {...props}>
       <div className="bg-olive-950/2.5 py-16 text-olive-950 dark:bg-white/5 dark:text-white">
         <Container className="flex flex-col gap-16">
-          <nav className="grid grid-cols-2 gap-6 text-sm/7 sm:has-[>:last-child:nth-child(3)]:grid-cols-3 sm:has-[>:nth-child(5)]:grid-cols-3 md:has-[>:last-child:nth-child(4)]:grid-cols-4 lg:has-[>:nth-child(5)]:grid-cols-5">
-            {links}
-          </nav>
+          {aside ? (
+            <div className="grid grid-cols-1 gap-x-2 gap-y-8 lg:grid-cols-2">
+              <nav className="grid grid-cols-2 gap-6 text-sm/7 sm:has-[>:last-child:nth-child(3)]:grid-cols-3 sm:has-[>:nth-child(5)]:grid-cols-3 md:has-[>:last-child:nth-child(4)]:grid-cols-4 lg:has-[>:nth-child(5)]:grid-cols-5">
+                {links}
+              </nav>
+              <div>{aside}</div>
+            </div>
+          ) : (
+            <nav className="grid grid-cols-2 gap-6 text-sm/7 sm:has-[>:last-child:nth-child(3)]:grid-cols-3 sm:has-[>:nth-child(5)]:grid-cols-3 md:has-[>:last-child:nth-child(4)]:grid-cols-4 lg:has-[>:nth-child(5)]:grid-cols-5">
+              {links}
+            </nav>
+          )}
           <div className="text-sm/7 text-olive-600 dark:text-olive-500">{fineprint}</div>
         </Container>
       </div>

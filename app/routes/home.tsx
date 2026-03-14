@@ -1,14 +1,5 @@
 import type { Route } from "./+types/home";
-import {
-  ButtonLink,
-  PlainButtonLink,
-  SoftButtonLink,
-} from "../components/elements/button";
-import { Link } from "../components/elements/link";
 import { Screenshot } from "../components/elements/screenshot";
-import { ArrowNarrowRightIcon } from "../components/icons/arrow-narrow-right-icon";
-import { ChevronIcon } from "../components/icons/chevron-icon";
-import { CallToActionSimple } from "../components/sections/call-to-action-simple";
 import {
   FAQsTwoColumnAccordion,
   Faq,
@@ -18,11 +9,6 @@ import {
   Features,
 } from "../components/sections/features-three-column-with-demos";
 import { HeroWithDemoOnBackground } from "../components/sections/hero-with-demo-on-background";
-import {
-  Plan,
-  PricingMultiTier,
-} from "../components/sections/pricing-multi-tier";
-import { TestimonialLargeQuote } from "../components/sections/testimonial-with-large-quote";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -152,28 +138,6 @@ export default function Home() {
         />
       </FAQsTwoColumnAccordion>
 
-      {/* Call To Action */}
-      {/* <CallToActionSimple
-        id="call-to-action"
-        headline="Ready to make customer support feel simple again?"
-        subheadline={
-          <p>
-            Join hundreds of teams using Oatmeal to deliver faster, friendlier email support — using a massive network
-            of low wage workers stationed around the globe
-          </p>
-        }
-        cta={
-          <div className="flex items-center gap-4">
-            <ButtonLink href="#" size="lg">
-              Start free trial
-            </ButtonLink>
-
-            <PlainButtonLink href="#" size="lg">
-              Book a demo <ChevronIcon />
-            </PlainButtonLink>
-          </div>
-        }
-      /> */}
     </>
   );
 }
