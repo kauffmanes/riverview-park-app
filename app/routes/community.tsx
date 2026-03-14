@@ -9,5 +9,9 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function Community() {
-  return <StoryMapEmbed storyId="8d5b644ac7f74bf188cadaa51ea694e4" />;
+  return (
+    <div className="container mx-auto">
+      <StoryMapEmbed storyId="8d5b644ac7f74bf188cadaa51ea694e4" />
+    </div>
+  );
 }

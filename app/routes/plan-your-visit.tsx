@@ -1,4 +1,4 @@
-import type { Route } from "./+types/facilities";
+import type { Route } from "./+types/plan-your-visit";
 import { StoryMapEmbed } from "../components/elements/storymap-embed";
 
 export function meta({}: Route.MetaArgs) {
@@ -13,5 +13,9 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function PlanYourVisit() {
-  return <StoryMapEmbed storyId="468b6d61ad6a4bfa8e1a14674f18f414" />;
+  return (
+    <div className="container mx-auto">
+      <StoryMapEmbed storyId="468b6d61ad6a4bfa8e1a14674f18f414" />
+    </div>
+  );
 }
