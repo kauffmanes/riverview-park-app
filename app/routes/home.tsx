@@ -196,12 +196,12 @@ export default function Home() {
         <Faq
           id="faq-7"
           question="Can I bike in the park?"
-          answer="Biking is allowed on the paved park roads. The hiking trails are for pedestrian use only."
+          answer="Biking is allowed on the paved park roads and on the trails. No dirtbikes are allowed, but e-bikes are permitted, as long as they are classified as Class 1 or Class 2."
         />
         <Faq
           id="faq-8"
           question="How do I get to the Allegheny Observatory?"
-          answer="The Observatory is located at 159 Riverview Avenue. Follow the main park road past the swimming pool and continue uphill. Free parking is available in the lot next to the building."
+          answer="The Observatory is located at 159 Riverview Avenue. Follow the main park road past the Visitor' Center and continue uphill. Free parking is available in the lot next to the building."
         />
       </FAQsTwoColumnAccordion>
     </>
