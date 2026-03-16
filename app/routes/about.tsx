@@ -1,16 +1,16 @@
 import type { Route } from "./+types/about";
-import { ButtonLink, PlainButtonLink } from "../components/elements/button";
-import { ChevronIcon } from "../components/icons/chevron-icon";
-import { CallToActionSimple } from "../components/sections/call-to-action-simple";
 import { HeroLeftAlignedWithPhoto } from "../components/sections/hero-left-aligned-with-photo";
-import { Stat, StatsWithGraph } from "../components/sections/stats-with-graph";
-import { TeamFourColumnGrid, TeamMember } from "../components/sections/team-four-column-grid";
-import { TestimonialTwoColumnWithLargePhoto } from "../components/sections/testimonial-two-column-with-large-photo";
+import { CallToActionSimple } from "../components/sections/call-to-action-simple";
+import { ButtonLink } from "../components/elements/button";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "About — Riverview Park App" },
-    { name: "description", content: "Your customer success is our mission." },
+    { title: "About — Riverview Park" },
+    {
+      name: "description",
+      content:
+        "Learn how the Riverview Park app was built and the story behind the project.",
+    },
   ];
 }
 
@@ -20,134 +20,99 @@ export default function About() {
       {/* Hero */}
       <HeroLeftAlignedWithPhoto
         id="hero"
-        headline="Your customer success is our mission."
+        headline="About This Project"
         subheadline={
           <p>
-            We're on a mission to take the human element completely out of customer support — so your team can focus on
-            what matters most, profitability.
+            The Riverview Park app is a community-driven guide to one of
+            Pittsburgh's most beloved green spaces. Learn about the tools,
+            technologies, and motivations behind the project.
           </p>
         }
         photo={
           <img
-            src="/img/photos/1.webp"
-            alt=""
-            width={1800}
-            height={945}
-            className="not-dark:bg-white/75 dark:bg-black/75"
+            src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0"
+            alt="Code on a laptop screen"
+            className="size-full object-cover"
+            width={1740}
+            height={1160}
           />
         }
       />
 
-      {/* Stats */}
-      <StatsWithGraph
-        id="stats"
-        eyebrow="Built for scale"
-        headline="The inbox powering customer conversations everywhere."
-        subheadline={
-          <p>
-            Oatmeal helps teams deliver personal, organized, and fast customer support across the world. From small
-            startups to enterprise teams, we process millions of messages each month — using a massive network of low
-            wage workers stationed around the globe.
-          </p>
-        }
-      >
-        <Stat stat="2M+" text="Emails manually processed every week across thousands of teams." />
-        <Stat stat="99.98%" text="Uptime — because your customers never stop complaining." />
-      </StatsWithGraph>
-
-      {/* Testimonial */}
-      <TestimonialTwoColumnWithLargePhoto
-        id="testimonial"
-        quote={
-          <p>
-            Ever since we started using Oatmeal, our customer satisfaction scores have skyrocketed. The personal touch
-            that their human-AI hybrid support provides is unparalleled.
-          </p>
-        }
-        img={
-          <img
-            src="/img/avatars/16-h-1000-w-1400.webp"
-            alt=""
-            className="not-dark:bg-white/75 dark:bg-black/75"
-            width={1400}
-            height={1000}
-          />
-        }
-        name="Lynn Marshall"
-        byline="Founder at Pine Labs"
-      />
-
-      {/* Team */}
-      <TeamFourColumnGrid
-        id="team"
-        headline="Our leadership team"
-        subheadline={
-          <p>
-            Oatmeal's leadership team combines decades of experience in private equity, where they honed their skills
-            in cost-cutting and maximizing shareholder value.
-          </p>
-        }
-      >
-        <TeamMember
-          img={<img src="/img/avatars/1-h-1000-w-800.webp" alt="" className="not-dark:bg-white/75 dark:bg-black/75" width={800} height={1000} />}
-          name="Leslie Alexander"
-          byline="Co-Founder / CEO"
-        />
-        <TeamMember
-          img={<img src="/img/avatars/2-h-1000-w-800.webp" alt="" className="not-dark:bg-white/75 dark:bg-black/75" width={800} height={1000} />}
-          name="Michael Foster"
-          byline="Co-Founder / CTO"
-        />
-        <TeamMember
-          img={<img src="/img/avatars/7-h-1000-w-800.webp" alt="" className="not-dark:bg-white/75 dark:bg-black/75" width={800} height={1000} />}
-          name="Dries Vincent"
-          byline="Business Relations"
-        />
-        <TeamMember
-          img={<img src="/img/avatars/4-h-1000-w-800.webp" alt="" className="not-dark:bg-white/75 dark:bg-black/75" width={800} height={1000} />}
-          name="Lindsay Walton"
-          byline="Front-end Developer"
-        />
-        <TeamMember
-          img={<img src="/img/avatars/5-h-1000-w-800.webp" alt="" className="not-dark:bg-white/75 dark:bg-black/75" width={800} height={1000} />}
-          name="Noor Hasan"
-          byline="Designer"
-        />
-        <TeamMember
-          img={<img src="/img/avatars/6-h-1000-w-800.webp" alt="" className="not-dark:bg-white/75 dark:bg-black/75" width={800} height={1000} />}
-          name="Tom Cook"
-          byline="Director of Product"
-        />
-        <TeamMember
-          img={<img src="/img/avatars/8-h-1000-w-800.webp" alt="" className="not-dark:bg-white/75 dark:bg-black/75" width={800} height={1000} />}
-          name="Whitney Francis"
-          byline="Copywriter"
-        />
-        <TeamMember
-          img={<img src="/img/avatars/3-h-1000-w-800.webp" alt="" className="not-dark:bg-white/75 dark:bg-black/75" width={800} height={1000} />}
-          name="Leonard Wu"
-          byline="Senior Designer"
-        />
-      </TeamFourColumnGrid>
-
-      {/* Call To Action */}
-      <CallToActionSimple
-        id="call-to-action"
-        headline="Have any more questions?"
-        subheadline={
-          <p>Chat to someone on our sales team, who will make promises about our roadmap that we won't keep.</p>
-        }
-        cta={
-          <div className="flex items-center gap-4">
-            <ButtonLink href="#" size="lg">
-              Chat with us
-            </ButtonLink>
-            <PlainButtonLink href="#" size="lg">
-              Book a demo <ChevronIcon />
-            </PlainButtonLink>
+      {/* How It Was Built */}
+      <section id="how-it-was-built" className="py-16">
+        <div className="container mx-auto max-w-4xl px-6">
+          <h2 className="font-heading text-3xl font-bold tracking-tight sm:text-4xl">
+            How It Was Built
+          </h2>
+          <div className="mt-6 space-y-4 text-lg text-gray-600 dark:text-gray-300">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur.
+            </p>
+            <p>
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+              officia deserunt mollit anim id est laborum. Sed ut perspiciatis
+              unde omnis iste natus error sit voluptatem accusantium doloremque
+              laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+              veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+            </p>
           </div>
-        }
-      />
+        </div>
+      </section>
+
+      {/* Tech Stack */}
+      <section id="tech-stack" className="bg-gray-50 py-16 dark:bg-gray-900">
+        <div className="container mx-auto max-w-4xl px-6">
+          <h2 className="font-heading text-3xl font-bold tracking-tight sm:text-4xl">
+            Tech Stack
+          </h2>
+          <div className="mt-6 space-y-4 text-lg text-gray-600 dark:text-gray-300">
+            <p>
+              This application was built with React Router v7 (with server-side
+              rendering), TypeScript, and Tailwind CSS v4. The build tooling is
+              powered by Vite, and the app is containerized with Docker for
+              deployment.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nemo enim
+              ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+              sed quia consequuntur magni dolores eos qui ratione voluptatem
+              sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia
+              dolor sit amet.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Riverview Park */}
+      <section id="why-riverview" className="py-16">
+        <div className="container mx-auto max-w-4xl px-6">
+          <h2 className="font-heading text-3xl font-bold tracking-tight sm:text-4xl">
+            Why Riverview Park?
+          </h2>
+          <div className="mt-6 space-y-4 text-lg text-gray-600 dark:text-gray-300">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. At vero
+              eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+              praesentium voluptatum deleniti atque corrupti quos dolores et
+              quas molestias excepturi sint occaecati cupiditate non provident,
+              similique sunt in culpa qui officia deserunt mollitia animi, id
+              est laborum et dolorum fuga.
+            </p>
+            <p>
+              Et harum quidem rerum facilis est et expedita distinctio. Nam
+              libero tempore, cum soluta nobis est eligendi optio cumque nihil
+              impedit quo minus id quod maxime placeat facere possimus, omnis
+              voluptas assumenda est, omnis dolor repellendus.
+            </p>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

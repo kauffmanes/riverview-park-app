@@ -110,7 +110,7 @@ export default function Home() {
                 </p>
               }
             />
-            <FeatureThreeColumnWithDemos
+            {/* <FeatureThreeColumnWithDemos
               href="/community"
               demo={
                 <Screenshot wallpaper="purple" placement="top-left">
@@ -131,6 +131,29 @@ export default function Home() {
                   The park hosts a variety of events, including public lectures
                   at the Allegheny Observatory, Movie in the Park, and the
                   annual Riverview Park Run.
+                </p>
+              }
+            /> */}
+            <FeatureThreeColumnWithDemos
+              href="/about"
+              demo={
+                <Screenshot wallpaper="purple" placement="top-left">
+                  <CaptionedImage caption="Photo via Unsplash">
+                    <img
+                      src="https://plus.unsplash.com/premium_photo-1681885032909-8d645ac23be4?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      alt="About the Riverview Park app"
+                      className="size-full object-cover"
+                      width={1740}
+                      height={1160}
+                    />
+                  </CaptionedImage>
+                </Screenshot>
+              }
+              headline="About the project"
+              subheadline={
+                <p>
+                  Read about how this map was created, the tools and
+                  technologies used, and the story behind the project.
                 </p>
               }
             />

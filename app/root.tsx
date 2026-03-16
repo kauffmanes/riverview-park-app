@@ -55,7 +55,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
             <>
               <NavbarLink href="/plan-your-visit">Plan Your Visit</NavbarLink>
               <NavbarLink href="/nature">Nature</NavbarLink>
-              <NavbarLink href="/community">Community</NavbarLink>
+              {/* <NavbarLink href="/community">Community</NavbarLink> */}
+              <NavbarLink href="/about">About</NavbarLink>
             </>
           }
           logo={
@@ -75,7 +76,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
               <FooterCategory title="Explore">
                 <FooterLink href="/plan-your-visit">Plan Your Visit</FooterLink>
                 <FooterLink href="/nature">Nature</FooterLink>
-                <FooterLink href="/community">Community</FooterLink>
+                {/* <FooterLink href="/community">Community</FooterLink> */}
               </FooterCategory>
             </>
           }
