@@ -18,17 +18,40 @@ export function NavbarLink({
       {...props}
     >
       {children}
-      <span className="inline-flex p-1.5 opacity-0 group-hover:opacity-100 lg:hidden" aria-hidden="true">
-        <svg fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
-          <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+      <span
+        className="inline-flex p-1.5 opacity-0 group-hover:opacity-100 lg:hidden"
+        aria-hidden="true"
+      >
+        <svg
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth={1.5}
+          stroke="currentColor"
+          className="size-6"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="m8.25 4.5 7.5 7.5-7.5 7.5"
+          />
         </svg>
       </span>
     </a>
   );
 }
 
-export function NavbarLogo({ className, href, ...props }: { href: string } & Omit<ComponentProps<"a">, "href">) {
-  return <a href={href} {...props} className={clsx("inline-flex items-stretch", className)} />;
+export function NavbarLogo({
+  className,
+  href,
+  ...props
+}: { href: string } & Omit<ComponentProps<"a">, "href">) {
+  return (
+    <a
+      href={href}
+      {...props}
+      className={clsx("inline-flex items-stretch", className)}
+    />
+  );
 }
 
 export function NavbarWithLogoActionsAndCenteredLinks({
@@ -43,7 +66,10 @@ export function NavbarWithLogoActionsAndCenteredLinks({
   actions: ReactNode;
 } & ComponentProps<"header">) {
   return (
-    <header className={clsx("sticky top-0 z-10 bg-olive-100 dark:bg-olive-950", className)} {...props}>
+    <header
+      className={clsx("bg-olive-100 dark:bg-olive-950", className)}
+      {...props}
+    >
       <style>{`:root { --scroll-padding-top: 5.25rem }`}</style>
       <nav>
         <div className="mx-auto flex h-(--scroll-padding-top) max-w-7xl items-center gap-4 px-6 lg:px-10">
@@ -87,7 +113,11 @@ export function NavbarWithLogoActionsAndCenteredLinks({
                     stroke="currentColor"
                     className="size-6"
                   >
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M6 18 18 6M6 6l12 12"
+                    />
                   </svg>
                 </button>
               </div>
