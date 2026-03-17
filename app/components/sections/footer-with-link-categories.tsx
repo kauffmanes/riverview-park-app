@@ -57,7 +57,9 @@ export function FooterWithLinkCategories({
               {links}
             </nav>
           )}
-          <div className="text-sm/7 text-olive-600 dark:text-olive-500">{fineprint}</div>
+          <div className="text-sm/7 text-olive-600 dark:text-olive-500">
+            {fineprint}
+          </div>
         </Container>
       </div>
     </footer>

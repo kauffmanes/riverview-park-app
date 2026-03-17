@@ -12,7 +12,7 @@ export function CaptionedImage({
   return (
     <figure className={clsx("relative", className)} {...props}>
       {children}
-      <figcaption className="absolute bottom-0 right-0 bg-black/50 px-2 py-1 text-xs text-white/80">
+      <figcaption className="absolute bottom-0 left-0 bg-black/50 px-2 py-1 text-xs text-white/80">
         {caption}
       </figcaption>
     </figure>

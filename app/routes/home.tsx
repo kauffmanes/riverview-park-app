@@ -9,7 +9,10 @@ import {
   FeatureThreeColumnWithDemos,
   Features,
 } from "../components/sections/features-three-column-with-demos";
+import { CreditsAndCitations } from "../components/sections/credits-and-citations";
 import { HeroWithDemoOnBackground } from "../components/sections/hero-with-demo-on-background";
+import { Link } from "~/components/elements/link";
+import { ArrowNarrowRightIcon } from "~/components/icons/arrow-narrow-right-icon";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -32,7 +35,7 @@ export default function Home() {
           <p>A local's guide to Pittsburgh's most overlooked park.</p>
         }
         demo={
-          <CaptionedImage caption="Photo: Friends of the Observatory">
+          <CaptionedImage caption="Historical photo of the Allegheny Observatory. Source: https://www.ohipgh.org">
             <img
               src="https://images.squarespace-cdn.com/content/v1/64d182ccdbe1c3217d5eaa4d/5355838a-51d0-4b19-b8d7-41c802d99912/Facebook+observatory.jpg"
               alt="Allegheny Observatory at Riverview Park"
@@ -54,24 +57,24 @@ export default function Home() {
             hiking trails, interesting geology, and community spaces. Whether it
             be catching a public lecture at the Allegheny Observatory, spreading
             out a blanket to watch a movie during Movie in the Park, or tackling
-            the grueling park loop run, there’s a little something for everyone.
+            the grueling park loop run, there's a little something for everyone.
           </p>
         }
-        // cta={
-        //   <Link href="#">
-        //     See how it works <ArrowNarrowRightIcon />
-        //   </Link>
-        // }
+        cta={
+          <Link href="/about">
+            Read about this project <ArrowNarrowRightIcon />
+          </Link>
+        }
         features={
           <>
             <FeatureThreeColumnWithDemos
               href="/plan-your-visit"
               demo={
                 <Screenshot wallpaper="brown" placement="bottom-left">
-                  <CaptionedImage caption="Photo via Unsplash">
+                  <CaptionedImage caption="Chapel Shelter. Photo by Emily Kauffman">
                     <img
-                      src="https://images.unsplash.com/photo-1701457916764-7cc7c990b37a?q=80&w=1750&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                      alt="Plan Your Visit at Riverview Park"
+                      src="/img/photos/chapelshelter.jpg"
+                      alt="Chapel shelter at Riverview Park"
                       className="size-full object-cover"
                       width={1750}
                       height={1167}
@@ -91,10 +94,10 @@ export default function Home() {
               href="/nature"
               demo={
                 <Screenshot wallpaper="green" placement="bottom-right">
-                  <CaptionedImage caption="Photo via Unsplash">
+                  <CaptionedImage caption="Squirrel running up a tree. Photo by Emily Kauffman">
                     <img
-                      src="https://images.unsplash.com/photo-1542202229-7d93c33f5d07?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                      alt="Nature at Riverview Park"
+                      src="/img/photos/squirrel.jpg"
+                      alt="A squirrel running up a tree"
                       className="size-full object-cover"
                       width={1740}
                       height={1160}
@@ -204,6 +207,57 @@ export default function Home() {
           answer="The Observatory is located at 159 Riverview Avenue. Follow the main park road past the Visitor' Center and continue uphill. Free parking is available in the lot next to the building."
         />
       </FAQsTwoColumnAccordion>
+
+      {/* Credits and Citations */}
+      {/* <CreditsAndCitations
+        id="credits"
+        description="All photos and images have been created by Emily Kauffman, other than where noted otherwise. Images have been reproduced for educational purposes under fair use."
+        contentCitations={[
+          {
+            id: "1",
+            label: "City of Pittsburgh — Riverview Park",
+            url: "https://pittsburghpa.gov/citiparks/riverview-park",
+          },
+          {
+            id: "2",
+            label: "Allegheny Observatory — History and Public Programs",
+            url: "https://www.pitt.edu/~aobsvtry/",
+          },
+          {
+            id: "3",
+            label: "AllTrails — Riverview Park Trails",
+            url: "https://www.alltrails.com/parks/us/pennsylvania/riverview-park",
+          },
+          {
+            id: "4",
+            label: "iNaturalist — Riverview Park Observations",
+            url: "https://www.inaturalist.org/",
+          },
+        ]}
+        attributionCitations={[
+          {
+            id: "1",
+            label:
+              "Historical photo of the Allegheny Observatory — Observatory History Initiative of Pittsburgh (ohipgh.org)",
+            url: "https://www.ohipgh.org",
+          },
+          {
+            id: "2",
+            label: "Unsplash — Free photos used throughout the site",
+            url: "https://unsplash.com",
+          },
+          {
+            id: "3",
+            label: "Oatmeal UI Template by Tailwind CSS",
+            url: "https://tailwindcss.com/plus/kits/oatmeal",
+          },
+          {
+            id: "4",
+            label: "ArcGIS StoryMaps by Esri",
+            url: "https://storymaps.arcgis.com",
+          },
+        ]}
+      /> */}
     </>
   );
 }
