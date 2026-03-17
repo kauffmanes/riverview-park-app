@@ -77,6 +77,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
                 <FooterLink href="/plan-your-visit">Plan Your Visit</FooterLink>
                 <FooterLink href="/nature">Nature</FooterLink>
                 {/* <FooterLink href="/community">Community</FooterLink> */}
+                <FooterLink href="/about">About</FooterLink>
               </FooterCategory>
             </>
           }
